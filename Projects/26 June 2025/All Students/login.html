@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BaitusSalam Tech Park Students List</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="logo">BaitusSalam </h2>
+            <ul class="menu">
+                <li class="active">🏠 Home</li>
+                <li>👨‍🎓 Students</li>
+                <li>👩‍🏫 Teachers</li>
+                <li>📚 Library</li>
+                <li>👤 Account</li>
+                <li>🏫 Class</li>
+                <li>📖 Subject</li>
+                <li>🗓 Routine</li>
+                <li>✅ Attendance</li>
+                <li>📝 Exam</li>
+                <li>📢 Notice</li>
+                <li>🚌 Transport</li>
+                <li> Hostel</li>
+            </ul>
+        </aside>
+
+        <!-- Main content -->
+        <main class="main">
+            <header class="topbar">
+                <input type="text" placeholder="Search..." class="search" />
+                <div class="user">👤 Suhaib Ali (Admin)</div>
+            </header>
+
+            <section class="content">
+                <div class="header">
+                    <h2>Students List</h2>
+                    <button class="add-btn">+ Add Students</button>
+                </div>
+
+                <table class="student-table">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" /></th>
+                            <th>Student Name</th>
+                            <th>Roll</th>
+                            <th>Address</th>
+                            <th>Room </th>
+                            <th>Date of Birth</th>
+                            <th>Phone</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>Sohaib Ali</td>
+                            <td>#101</td>
+                            <td>House NO:23/b street 2 dha ph2</td>
+                            <td>07</td>
+                            <td>03/04/2004</td>
+                            <td>3312728509</td>
+                            <td>
+                                <button class="update-btn">Update</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Babar Ali</td>
+                            <td>#101</td>
+                            <td>Karachi</td>
+                            <td>03</td>
+                            <td>03/3/2001</td>
+                            <td>03312728509</td>
+                            <td>
+                                <button class="update-btn">Update</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
