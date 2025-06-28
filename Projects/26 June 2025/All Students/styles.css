@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: #f5f4fb;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: #fff;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 24px;
+    color: #FF5722;
+    margin-bottom: 20px;
+}
+
+.menu li {
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu li.active,
+.menu li:hover {
+    background: #eee;
+    border-radius: 5px;
+}
+
+/* Main Area */
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search {
+    padding: 8px 12px;
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.user {
+    font-weight: bold;
+}
+
+.content .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.add-btn {
+    background: #FF5722;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 1s ease-in-out;
+}
+
+.add-btn:hover {
+    background-color: #999999;
+    border: 1px solid #FF5722;
+}
+
+/* Table Styling */
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.student-table th,
+.student-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.student-table th {
+    background: #f0eefc;
+}
+
+.student-table tr:hover {
+    background: #f9f9f9;
+}
+
+.update-btn {
+    background: #FF5722;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 1s ease-in-out;
+}
+
+.update-btn:hover {
+    background-color: #999999;
+    border: 1px solid #FF5722;
+}
+
+.delete-btn {
+    background: #FF5722;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 1s ease-in-out;
+
+}
+
+.delete-btn:hover {
+    background-color: #999999;
+    border: 1px solid #FF5722;
+    /* border: 1ps solid black; */
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        display: flex;
+        overflow-x: scroll;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .menu li {
+        margin-right: 10px;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .student-table,
+    .student-table thead,
+    .student-table tbody,
+    .student-table th,
+    .student-table td,
+    .student-table tr {
+        display: block;
+    }
+
+    .student-table th {
+        display: none;
+    }
+
+    .student-table td {
+        position: relative;
+        padding-right: 50%;
+        text-align: left;
+    }
+
+    .student-table td::before {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        /* content: attr(data-label); */
+        font-weight: bold;
+        text-align: left;
+    }
+}

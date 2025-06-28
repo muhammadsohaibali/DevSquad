@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELEARN Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4a6bff;
+            --secondary: #f8f9fa;
+            --dark: #2c3e50;
+            --light: #ffffff;
+            --gray: #6c757d;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --info: #17a2b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: var(--dark);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            background-color: var(--light);
+            padding: 2rem 1.5rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            font-size: 2rem;
+        }
+
+        .nav-menu {
+            list-style: none;
+        }
+
+        .nav-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--gray);
+            font-weight: 500;
+            padding: 0.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link i {
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+
+        .nav-link.active,
+        .nav-link:hover {
+            background-color: var(--primary);
+            color: var(--light);
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            padding: 2rem;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .user-name {
+            font-weight: 600;
+        }
+
+        .user-title {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: var(--light);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .promo-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--light);
+        }
+
+        .promo-text {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 500;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--light);
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background-color: #e6e9f5;
+        }
+
+        /* Learning Card */
+        .learning-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .learning-item:last-child {
+            border-bottom: none;
+        }
+
+        .learning-title {
+            font-weight: 600;
+        }
+
+        .learning-meta {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: #e9ecef;
+            border-radius: 10px;
+            margin: 0.5rem 0;
+            height: 8px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            border-radius: 10px;
+            background-color: var(--primary);
+        }
+
+        .progress-text {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-align: right;
+        }
+
+        /* Book List */
+        .book-list {
+            list-style: none;
+        }
+
+        .book-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .book-item:last-child {
+            border-bottom: none;
+        }
+
+        .book-title {
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .book-author {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        /* Mentor Card */
+        .mentor-card {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .mentor-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+            object-fit: cover;
+        }
+
+        .mentor-info {
+            flex: 1;
+        }
+
+        .mentor-name {
+            font-weight: 600;
+        }
+
+        .mentor-title {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        .mentor-schedule {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-top: 0.3rem;
+        }
+
+        /* Activity Card */
+        .activity-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .activity-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        /* Todo List */
+        .todo-item {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .todo-item:last-child {
+            border-bottom: none;
+        }
+
+        .todo-check {
+            margin-right: 1rem;
+            color: var(--gray);
+        }
+
+        .todo-content {
+            flex: 1;
+        }
+
+        .todo-title {
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .todo-time {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        /* Grid Layout */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>ELEARN</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-book"></i>
+                        <span>Courses</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Insights</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Calendar</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <h1>Dashboard</h1>
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/40" alt="User Profile">
+                    <div>
+                        <div class="user-name">Rank Sharma</div>
+                        <div class="user-title">UPSC Aspirants</div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="grid-container">
+                <!-- Promo Card -->
+                <div class="card promo-card">
+                    <h2 class="card-title">Health Aspirants in Maths Reasoning</h2>
+                    <p class="promo-text">Now free for limited time period, choosing a score is possible to gain the
+                        enjoyment of the offer.</p>
+                    <a href="#" class="btn btn-primary">Subscribe Now</a>
+                </div>
+
+                <!-- Continue Learning -->
+                <div class="card">
+                    <h2 class="card-title">Continue Learning</h2>
+                    <div class="learning-item">
+                        <div>
+                            <div class="learning-title">Historical Places</div>
+                            <div class="learning-meta">240 Videos</div>
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <div>
+                            <div class="learning-title">64/140</div>
+                            <div class="learning-meta">This completed</div>
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <div>
+                            <div class="learning-title">8 days left</div>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 44%"></div>
+                            </div>
+                            <div class="progress-text">44%</div>
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <div>
+                            <div class="learning-title">Confined</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Continue Reading -->
+                <div class="card">
+                    <h2 class="card-title">Continue Reading</h2>
+                    <ul class="book-list">
+                        <li class="book-item">
+                            <div class="book-title">Indian Art and Culture</div>
+                            <div class="book-author">By Nitin Singhania</div>
+                        </li>
+                        <li class="book-item">
+                            <div class="book-title">Indian Polity</div>
+                            <div class="book-author">By Ni Laxmikanth</div>
+                        </li>
+                        <li class="book-item">
+                            <div class="book-title">Geography of India</div>
+                            <div class="book-author">By Majid Husain</div>
+                        </li>
+                    </ul>
+                    <div class="learning-item">
+                        <div class="learning-title">Counseling Schedule</div>
+                    </div>
+                </div>
+
+                <!-- Mentor Card -->
+                <div class="card">
+                    <h2 class="card-title">Looking at the Legend</h2>
+                    <div class="mentor-card">
+                        <img src="https://via.placeholder.com/50" alt="Mentor" class="mentor-img">
+                        <div class="mentor-info">
+                            <div class="mentor-name">Santi Choshtary</div>
+                            <div class="mentor-title">IAS Office</div>
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <div>
+                            <div class="learning-title">Health and Time Management</div>
+                            <div class="mentor-schedule">30 Sept 2022 - 2:00 PM - 4:00 PM</div>
+                        </div>
+                    </div>
+                    <div class="learning-item">
+                        <div class="learning-title">Schedule</div>
+                    </div>
+                </div>
+
+                <!-- Weekly Activities -->
+                <div class="card">
+                    <h2 class="card-title">Weekly Activities</h2>
+                    <div class="activity-value">10</div>
+                    <div class="activity-label">HRB/DM</div>
+                    <div class="learning-item">
+                        <div class="learning-title">Targeted Achieved</div>
+                    </div>
+                </div>
+
+                <!-- Todo List -->
+                <div class="card">
+                    <h2 class="card-title">Your To-Do List</h2>
+                    <div class="todo-item">
+                        <i class="far fa-circle todo-check"></i>
+                        <div class="todo-content">
+                            <div class="todo-title">Aptitude Assignment</div>
+                            <div class="todo-time">8:00 AM - 9:00 PM</div>
+                        </div>
+                    </div>
+                    <div class="todo-item">
+                        <i class="far fa-circle todo-check"></i>
+                        <div class="todo-content">
+                            <div class="todo-title">Complete 12 History Sessions</div>
+                            <div class="todo-time">7:00 AM - 2:00 PM</div>
+                        </div>
+                    </div>
+                    <div class="todo-item">
+                        <i class="far fa-circle todo-check"></i>
+                        <div class="todo-content">
+                            <div class="todo-title">Aptitude Live Session</div>
+                            <div class="todo-time">3:00 PM - 4:00 PM</div>
+                        </div>
+                    </div>
+                    <div class="todo-item">
+                        <i class="far fa-circle todo-check"></i>
+                        <div class="todo-content">
+                            <div class="todo-title">Read Current Affairs</div>
+                            <div class="todo-time">6:00 PM - 7:00 PM</div>
+                        </div>
+                    </div>
+                    <div class="todo-item">
+                        <i class="far fa-circle todo-check"></i>
+                        <div class="todo-content">
+                            <div class="todo-title">Prepare Notes of Statistics</div>
+                            <div class="todo-time">8:30 PM - 10:00 PM</div>
+                        </div>
+                    </div>
+                    <div class="todo-item">
+                        <i class="far fa-circle todo-check"></i>
+                        <div class="todo-content">
+                            <div class="todo-title">Math Practice</div>
+                            <div class="todo-time">10:00 PM - 12:00 AM</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
