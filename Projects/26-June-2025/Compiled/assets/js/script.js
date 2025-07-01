@@ -9,7 +9,7 @@ const CURRENT_PAGE = location.pathname.split('/').filter(Boolean).pop();
 
 const BASE_PATH = localStorage.getItem('local')
     ? '/projects/26-June-2025/Compiled/pages/'
-    : '/DevSquad/projects/26-June-2025/Compiled/pages/'
+    : '/DevSquad/Projects/26-June-2025/Compiled/pages/'
 
 // Main Code
 document.addEventListener('DOMContentLoaded', () => {
