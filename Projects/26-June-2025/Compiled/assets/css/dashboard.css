@@ -15,6 +15,8 @@ i {
 
 .div-container {
     display: flex;
+    flex-direction: row;
+    gap: 20px;
     height: 100vh;
 }
 
@@ -33,6 +35,11 @@ i {
     width: 15%;
 }
 
+.main-div-container {
+    flex: 1;
+    gap: 20px;
+}
+
 .div-main {
     flex: 1;
     padding: 20px;
@@ -43,10 +50,9 @@ i {
 .div-main>div,
 .div-sidebar-right>div {
     margin-bottom: 15px;
-    border-radius: 8px;
+    border-radius: 0;
 }
 
-/* Sidebar Left */
 .div-logo {
     width: 100%;
     gap: 10px;
@@ -58,18 +64,11 @@ i {
     padding: 10px 15px;
 }
 
-.div-logo:hover {
-    background-color: #28272c;
-}
-
-.div-logo img {
-    width: 50px;
-    margin: auto 0;
-    border-radius: 10px;
-}
-
-.div-logo span {
-    margin: auto 0;
+.div-logo>img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    object-fit: contain;
 }
 
 .div-tabs {
@@ -82,14 +81,10 @@ i {
 .div-tab {
     display: flex;
     flex-direction: row;
-    border-radius: 8px;
+    border-radius: 0;
     cursor: pointer;
     padding: 10px;
     gap: 10px;
-}
-
-.div-tab:hover {
-    background-color: #28272c;
 }
 
 .active {
@@ -157,7 +152,6 @@ i {
     }
 }
 
-/* Main Div */
 .div-main {
     display: flex;
     padding: 20px;
@@ -165,13 +159,13 @@ i {
     background-color: #131217;
 }
 
-/* Div - Search */
 .div-search {
     width: 100%;
     padding: 10px;
     display: flex;
     margin: 0 auto;
     flex-direction: row;
+    background-color: var(--background);
 }
 
 .div-search input {
@@ -179,11 +173,11 @@ i {
     height: 40px;
     outline: none;
     border: none;
-    color: #4f4e51;
-    font-size: 16px;
+    color: white;
+    font-size: 12px;
     font-weight: 500;
-    padding-left: 35px;
-    border-radius: 8px;
+    padding-left: 40px;
+    border-radius: 0;
     background-color: #2b2a2f;
 }
 
@@ -196,18 +190,24 @@ i {
     font-size: 20px;
 }
 
-/* Div - New Course */
 .div-new-course {
-    background: url('./assets/shopify-banner.png');
+    background: url('../imgs/shopify-banner.png');
     background-size: cover;
     background-position: left;
+    color: #131217;
     display: flex;
     margin: 10px;
     padding: 15px;
-    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
     height: fit-content;
     flex-direction: column;
     background-color: #03b9fe;
+}
+
+.div-new-course:hover {
+    transform: translateY(-2px);
 }
 
 .div-new-course .div-welcome {
@@ -232,7 +232,7 @@ i {
     margin-top: 10px;
     width: fit-content;
     padding: 10px 15px;
-    border-radius: 8px;
+    border-radius: 0;
     transition: 0.2s;
     background-color: #212a2f;
 }
@@ -241,19 +241,50 @@ i {
     background-color: #39383d;
 }
 
-/* Div - Your Courses */
 .div-your-courses {
     margin: 10px;
     display: flex;
+    color: #131217;
     flex-direction: column;
     margin-top: 0;
 }
 
-.your-courses-title {
+.section-header {
     margin: 10px 0;
     color: white;
+    display: flex;
+    flex-direction: row;
+    padding-right: 10px;
+    justify-content: space-between;
+}
+
+.section-header span {
     font-size: 20px;
+    margin: auto 0;
     font-weight: 500;
+}
+
+.section-header>div {
+    gap: 5px;
+    display: flex;
+}
+
+.section-header>div i {
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #242329;
+}
+
+
+.section-header>div i:hover {
+    background-color: #323038;
 }
 
 .div-your-courses .your-courses-section {
@@ -267,7 +298,7 @@ i {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    border-radius: 8px;
+    border-radius: 0;
     transition: 0.3s;
     height: fit-content;
     cursor: pointer;
@@ -298,7 +329,7 @@ i {
 }
 
 .your-course-header .course-days-remaining {
-    border-radius: 4px;
+    border-radius: 0;
     font-size: 14px;
     font-weight: 500;
     padding: 2px 5px;
@@ -376,7 +407,7 @@ i {
     margin: auto 0;
     padding: 5px 10px;
     color: white;
-    border-radius: 8px;
+    border-radius: 0;
     transition: 0.2s;
     margin: auto 0;
     background-color: #1c232e;
@@ -386,3 +417,71 @@ i {
     background-color: #272f3b;
 }
 
+.div-your-resources {
+    padding: 10px;
+}
+
+.div-your-resources-section {
+    gap: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.div-your-resource {
+    width: 100%;
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 0;
+    background-color: #2a292e;
+}
+
+.div-your-resource:hover {
+    transform: translateY(-2px);
+}
+
+.your-resource-title {
+    color: #dadada;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.your-resource-author {
+    font-style: italic;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
+.your-resource-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.your-resource-type {
+    background-color: #45444b;
+    padding: 0px 5px;
+    margin: auto 0;
+    font-size: 14px;
+    border-radius: 0;
+    height: fit-content;
+}
+
+.your-resource-read-watch-btn {
+    margin: auto 0;
+    color: #2a292e;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: 0.2s;
+    border-radius: 0;
+    background-color: #e9e9eb;
+}
+
+.your-resource-read-watch-btn:hover {
+    transform: translateY(-1px);
+    background-color: #d3d3d3;
+}

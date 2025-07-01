@@ -3,22 +3,31 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>BaitusSalam Tech Park Students List</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="all-students.css" />
 </head>
 
 <body>
     <div class="container">
         <!-- Sidebar -->
         <aside class="sidebar">
-            <h2 class="logo">BaitusSalam </h2>
+            <h2 class="logo"><img src="bautysSalamLOgo.jpg" alt="BaitusSalam Tech Park"> </h2>
             <ul class="menu">
-                <li class="active">🏠 Home</li>
-                <li>👨‍🎓 Students</li>
+                <li class="active"><a href="techparkAss.html">🏠 Home </a></li>
+                <!-- <li>👨‍🎓 Students</li> -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">👨‍🎓 Students</a>
+                    <div class="dropdown-content">
+                        <a href="TechParkLoginForm.html">Studen Profile</a>
+                        <a href="#">Settings</a>
+                        <a href="login.html">Login</a>
+                    </div>
+                </li>
+
                 <li>👩‍🏫 Teachers</li>
                 <li>📚 Library</li>
-                <li>👤 Account</li>
+                <li>👤 Account </li>
                 <li>🏫 Class</li>
                 <li>📖 Subject</li>
                 <li>🗓 Routine</li>
@@ -65,6 +74,46 @@
                             <td>07</td>
                             <td>03/04/2004</td>
                             <td>3312728509</td>
+                            <td>
+                                <button class="update-btn">Update</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Babar Ali</td>
+                            <td>#101</td>
+                            <td>Karachi</td>
+                            <td>03</td>
+                            <td>03/3/2001</td>
+                            <td>03312728509</td>
+                            <td>
+                                <button class="update-btn">Update</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Muhammad Ali</td>
+                            <td>#102</td>
+                            <td>Karachi</td>
+                            <td>07</td>
+                            <td>02/4/1998</td>
+                            <td>03312728509</td>
+                            <td>
+                                <button class="update-btn">Update</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Muhammad Nadeem</td>
+                            <td>#103</td>
+                            <td>House number 23/b malir karachi</td>
+                            <td>03</td>
+                            <td>03/3/1999</td>
+                            <td>03312728509</td>
                             <td>
                                 <button class="update-btn">Update</button>
                                 <button class="delete-btn">Delete</button>

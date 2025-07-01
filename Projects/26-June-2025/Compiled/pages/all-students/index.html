@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../assets/imgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../assets/css/all-students.css" />
+
+    <title>All Students - BaitusSalam TeckPark</title>
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="../../assets/imgs/btp-logo.png" alt="Tech Park Logo">
+            </div>
+            <ul class="menu">
+                <li class="active"><i class='bx bx-home-alt'></i> Home</li>
+                <li id="goto-dashboard"><i class='bx bx-chalkboard'></i> Dashboard</li>
+                <li id="my-profile"><i class='bx bx-user'></i> Profile</li>
+                <li><i class='bx bx-book-alt'></i> Courses</li>
+                <li><i class='bx bx-check-square'></i> Attendance</li>
+                <li><i class='bx bx-edit'></i> Exam</li>
+            </ul>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <input type="text" placeholder="Search students..." class="search" />
+                <div class="user">John Doe</div>
+            </header>
+
+            <section class="content">
+                <div class="header">
+                    <h2>Students List</h2>
+                    <button class="add-btn">
+                        <i class='bx bx-plus'></i> Add Student
+                    </button>
+                </div>
+
+                <table class="student-table">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" /></th>
+                            <th>Student Name</th>
+                            <th>Roll</th>
+                            <th>Address</th>
+                            <th>Room</th>
+                            <th>Date of Birth</th>
+                            <th>Phone</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>Sohaib Ali</td>
+                            <td>#101</td>
+                            <td>House NO:23/b street 2 dha ph2</td>
+                            <td>07</td>
+                            <td>03/04/2004</td>
+                            <td>3312728509</td>
+                            <td class="action-buttons">
+                                <button class="btn update-btn">
+                                    <i class='bx bx-edit'></i> Update
+                                </button>
+                                <button class="btn delete-btn">
+                                    <i class='bx bx-trash'></i> Delete
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Babar Ali</td>
+                            <td>#101</td>
+                            <td>Karachi</td>
+                            <td>03</td>
+                            <td>03/3/2001</td>
+                            <td>03312728509</td>
+                            <td class="action-buttons">
+                                <button class="btn update-btn">
+                                    <i class='bx bx-edit'></i> Update
+                                </button>
+                                <button class="btn delete-btn">
+                                    <i class='bx bx-trash'></i> Delete
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Muhammad Ali</td>
+                            <td>#102</td>
+                            <td>Karachi</td>
+                            <td>07</td>
+                            <td>02/4/1998</td>
+                            <td>03312728509</td>
+                            <td class="action-buttons">
+                                <button class="btn update-btn">
+                                    <i class='bx bx-edit'></i> Update
+                                </button>
+                                <button class="btn delete-btn">
+                                    <i class='bx bx-trash'></i> Delete
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Muhammad Nadeem</td>
+                            <td>#103</td>
+                            <td>House number 23/b malir karachi</td>
+                            <td>03</td>
+                            <td>03/3/1999</td>
+                            <td>03312728509</td>
+                            <td class="action-buttons">
+                                <button class="btn update-btn">
+                                    <i class='bx bx-edit'></i> Update
+                                </button>
+                                <button class="btn delete-btn">
+                                    <i class='bx bx-trash'></i> Delete
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Babar Ali</td>
+                            <td>#101</td>
+                            <td>Karachi</td>
+                            <td>03</td>
+                            <td>03/3/2001</td>
+                            <td>03312728509</td>
+                            <td class="action-buttons">
+                                <button class="btn update-btn">
+                                    <i class='bx bx-edit'></i> Update
+                                </button>
+                                <button class="btn delete-btn">
+                                    <i class='bx bx-trash'></i> Delete
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Details</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background: #f5f4fb;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 220px;
+            background: #fff;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: 200x;
+            cursor: pointer;
+        }
+
+        .menu {
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            list-style: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            border-radius: 5px;
+        }
+
+        .menu li.active,
+        .menu li:hover {
+            background: #eee;
+        }
+
+        .menu li a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Main Content */
+        .main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .search {
+            padding: 8px 12px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .user {
+            font-weight: bold;
+        }
+
+        .breadcrumb {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin: 0;
+            color: #333;
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .profile img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 30px;
+        }
+
+        .info-item {
+            margin-bottom: 10px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 1s ease-in-out;
+        }
+
+        .edit-btn {
+            background: #FF5722;
+            color: black;
+        }
+
+        .edit-btn:hover {
+            background-color: #999999;
+            border: 1px solid #FF5722;
+        }
+
+        .remove-btn {
+            background: #FF5722;
+            color: black;
+            transition: background 1s ease-in-out;
+        }
+
+        .remove-btn:hover {
+            background-color: #999999;
+            border: 1px solid #FF5722;
+
+        }
+
+
+        @media(max-width: 900px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .topbar {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
+
+            .search {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="bautysSalamLOgo.jpg" alt="BaitusSalam Tech Park" />
+            </div>
+            <ul class="menu">
+                <li class="active"><a href="techparkAss.html">🏠 Home</a></li>
+                <li>👨‍🎓 Students</li>
+                <li>👩‍🏫 Teachers</li>
+                <li>📚 Library</li>
+                <li>🧑 Account</li>
+                <li>🏫 Class</li>
+                <li>📖 Subject</li>
+                <li>🗓 Routine</li>
+                <li>✅ Attendance</li>
+                <li>📝 Exam</li>
+                <li>📢 Notice</li>
+                <li>🚌 Transport</li>
+                <li>🏠 Hostel</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <header class="topbar">
+                <input type="text" placeholder="Search..." class="search" />
+                <div class="user">👤 Suhaib Ali (Admin)</div>
+            </header>
+
+            <h2>Students Details</h2>
+            <div class="breadcrumb">Students / Students details</div>
+
+            <h3>About Me</h3>
+            <div class="cards">
+                <!-- Profile Card -->
+                <div class="card">
+                    <div class="profile">
+                        <img src="student profile.webp" alt="Profile" />
+                        <div>
+                            <h3>Babar Ali</h3>
+                            <div style="color: gray;">Users</div>
+                        </div>
+                    </div>
+                    <div class="info-grid">
+                        <div class="info-item"><span class="label">First Name:</span> Babar</div>
+                        <div class="info-item"><span class="label">Last Name:</span> Ali</div>
+                        <div class="info-item"><span class="label">Father Name:</span> Hakim Ali</div>
+                        <div class="info-item"><span class="label">Mother Name:</span> ----</div>
+                        <div class="info-item"><span class="label">Father Occupation:</span>----</div>
+                        <div class="info-item"><span class="label">Mother Occupation:</span> House Wife</div>
+                        <div class="info-item"><span class="label">Date of Birth:</span> 07-08-2001</div>
+                        <div class="info-item"><span class="label">Religion:</span> Islam</div>
+                        <div class="info-item"><span class="label">Course:</span>---- </div>
+                        <div class="info-item"><span class="label">Section:</span> Red</div>
+                        <div class="info-item"><span class="label">Roll:</span> 1001</div>
+                        <div class="info-item"><span class="label">Admission Date:</span> 09-01-2025</div>
+                    </div>
+                </div>
+
+                <!-- Contact Info Card -->
+                <div class="card">
+                    <div class="profile">
+                        <h3>Contact Information</h3>
+                    </div>
+                    <div class="info-grid">
+                        <div class="info-item"><span class="label">Primary Phone:</span> (555) 123-4567</div>
+                        <div class="info-item"><span class="label">Secondary Phone:</span> (555) 987-6543</div>
+                        <div class="info-item"><span class="label">Primary Email:</span> bali123@gmail.com</div>
+                        <div class="info-item"><span class="label">Secondary Email:</span> steve48@gmail.com</div>
+                        <div class="info-item"><span class="label">Address:</span> Springfield</div>
+                        <div class="info-item"><span class="label">Street Address:</span> Elm Street</div>
+                        <div class="info-item"><span class="label">House Name:</span> Meadowview</div>
+                        <div class="info-item"><span class="label">House Number:</span> 62701</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="remove-btn">Remove</button>
+                <button class="edit-btn">Edit</button>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

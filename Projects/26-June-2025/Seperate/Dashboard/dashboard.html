@@ -8,8 +8,9 @@
         rel="stylesheet">
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-    <!-- <link rel="stylesheet" href="./base.css"> -->
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/themed-styles.css">
+    <link rel="stylesheet" href="./assets/css/responsive-styles.css">
 
     <title>Student Dashboard - Baitussalam TechPark</title>
 </head>
@@ -18,7 +19,7 @@
     <div class="div-container">
         <div class="div-sidebar-left">
             <div class="div-logo">
-                <img src="./assets/baitusslaam-logo.png" alt="Baitussalam TechPark Logo">
+                <img src="./assets/imgs/baitusslaam-logo.png" alt="Baitussalam TechPark Logo">
                 <span>TechPark</span>
             </div>
             <div class="div-tabs">
@@ -72,7 +73,13 @@
                 </div>
             </div>
             <div class="div-your-courses">
-                <div class="your-courses-title"> Your Courses </div>
+                <div class="section-header">
+                    <span>Your Courses</span>
+                    <div class="section-action-btns">
+                        <i class='bxr bx-caret-left'></i>
+                        <i class='bxr bx-caret-right'></i>
+                    </div>
+                </div>
                 <div class="your-courses-section">
                     <div class="your-course yellow-div">
                         <div class="your-course-header">
@@ -120,7 +127,43 @@
                     </div>
                 </div>
             </div>
-            <div class="div-your-resources"></div>
+            <div class="div-your-resources">
+                <div class="section-header">
+                    <span>Your Resources</span>
+                    <div class="section-action-btns">
+                        <i class='bxr bx-caret-left'></i>
+                        <i class='bxr bx-caret-right'></i>
+                    </div>
+                </div>
+                <div class="div-your-resources-section">
+                    <div class="div-your-resource">
+                        <div class="your-resource-title">Clean Code</div>
+                        <div class="your-resource-author">Robert Martin</div>
+                        <div class="your-resource-footer">
+                            <div class="your-resource-type">PDF</div>
+                            <div class="your-resource-read-watch-btn">Read</div>
+                        </div>
+                    </div>
+
+                    <div class="div-your-resource">
+                        <div class="your-resource-title">Intro to Shopify Store Setup</div>
+                        <div class="your-resource-author">Recorded Session - BWT</div>
+                        <div class="your-resource-footer">
+                            <div class="your-resource-type">Video</div>
+                            <div class="your-resource-read-watch-btn">Watch</div>
+                        </div>
+                    </div>
+
+                    <div class="div-your-resource">
+                        <div class="your-resource-title">JavaScript DOM Reference</div>
+                        <div class="your-resource-author">MDN Docs</div>
+                        <div class="your-resource-footer">
+                            <div class="your-resource-type">Docs</div>
+                            <div class="your-resource-read-watch-btn">View</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="div-sidebar-right">
             <div class="div-attendance"></div>
@@ -128,7 +171,7 @@
         </div>
     </div>
 
-    <script src="./script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
