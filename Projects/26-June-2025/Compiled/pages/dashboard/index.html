@@ -6,20 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="../../assets/imgs/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../assets/css/dashboard.css">
     <link rel="stylesheet" href="../../assets/css/dashboard-responsive.css">
     <link rel="stylesheet" href="../../assets/css/dashboard-themed.css">
+    <link rel="stylesheet" href="../../assets/css/all-students.css">
 
     <title>Student Dashboard - Baitussalam TechPark</title>
 </head>
 
 <body>
     <div class="div-container">
-        <div class="div-sidebar-left">
+        <!-- <div class="div-sidebar-left">
             <div class="div-logo">
                 <img src="../../assets/imgs/btp-logo.png" class="logo" alt="not">
+                <span>BT</span>
             </div>
             <div class="div-tabs">
                 <div class="div-tab active">
@@ -55,7 +58,26 @@
                 <i class='bx bxs-arrow-out-left-square-half'></i>
                 <span>Logout</span>
             </div>
-        </div>
+        </div> -->
+
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="../../assets/imgs/btp-logo.png" alt="Tech Park Logo">
+            </div>
+            <ul class="menu">
+                <li class="active" id="goto-dashboard"><i class='bx bx-chalkboard'></i> Dashboard</li>
+                <li id="my-profile"><i class='bx bx-user'></i> Profile</li>
+                <li id="all-students"><i class='bx bxs-group'></i> All Students</li>
+                <li><i class='bx bx-book-alt'></i> Courses</li>
+                <li><i class='bx bx-check-square'></i> Attendance</li>
+                <li><i class='bx bx-edit'></i> Exam</li>
+            </ul>
+            <div class="div-logout" id="logout-btn">
+                <i class='bxr  bx-arrow-in-left-square-half'></i>
+                <span>Logout</span>
+            </div>
+        </aside>
+
         <div class="main-div-container">
             <div class="div-search">
                 <i class='bx bx-search'></i>

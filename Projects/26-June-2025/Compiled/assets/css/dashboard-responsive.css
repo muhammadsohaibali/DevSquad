@@ -1,4 +1,19 @@
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
+    .div-logo>img {
+        display: none;
+    }
+
+    .div-logo>span {
+        display: block;
+        margin: 0 auto;
+        padding: 3px 8px;
+        background-color: white;
+        color: var(--primary);
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 800px) {
     .div-container {
         padding-top: 50px;
     }
@@ -29,7 +44,12 @@
     }
 
     .div-logo>img {
-        width: 40px;
+        display: none;
+    }
+
+    .div-logo>span {
+        margin: auto;
+        height: fit-content;
     }
 
     .div-tabs {

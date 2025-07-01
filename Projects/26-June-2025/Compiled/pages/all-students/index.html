@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../../assets/imgs/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../assets/css/all-students.css" />
@@ -19,19 +20,26 @@
                 <img src="../../assets/imgs/btp-logo.png" alt="Tech Park Logo">
             </div>
             <ul class="menu">
-                <li class="active"><i class='bx bx-home-alt'></i> Home</li>
                 <li id="goto-dashboard"><i class='bx bx-chalkboard'></i> Dashboard</li>
                 <li id="my-profile"><i class='bx bx-user'></i> Profile</li>
+                <li class="active" id="all-students"><i class='bx bxs-group'></i> All Students</li>
                 <li><i class='bx bx-book-alt'></i> Courses</li>
                 <li><i class='bx bx-check-square'></i> Attendance</li>
                 <li><i class='bx bx-edit'></i> Exam</li>
             </ul>
+            <div class="div-logout" id="logout-btn">
+                <i class='bxr  bx-arrow-in-left-square-half'></i>
+                <span>Logout</span>
+            </div>
         </aside>
 
         <main class="main">
             <header class="topbar">
                 <input type="text" placeholder="Search students..." class="search" />
-                <div class="user">John Doe</div>
+                <div class="user-info">
+                    <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="User" class="user-avatar" />
+                    <span>John Doe</span>
+                </div>
             </header>
 
             <section class="content">

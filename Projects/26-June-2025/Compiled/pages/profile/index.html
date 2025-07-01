@@ -5,14 +5,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
   <link rel="shortcut icon" href="../../assets/imgs/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../../assets/css/profile.css">
+  <link rel="stylesheet" href="../../assets/css/all-students.css">
   <title>My Profile - Baitussalam TechPark</title>
 </head>
 
 <body>
   <div class="container">
-    <nav class="sidebar">
+    <!-- <nav class="sidebar">
       <div class="logo">
         <img src="../../assets/imgs/btp-logo.png" class="logo" alt="not">
       </div>
@@ -24,7 +27,25 @@
         <li><a href="#" class="nav-link">Classes</a></li>
         <li><a href="#" class="nav-link">Complaints</a></li>
       </ul>
-    </nav>
+    </nav> -->
+
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="../../assets/imgs/btp-logo.png" alt="Tech Park Logo">
+      </div>
+      <ul class="menu">
+        <li id="goto-dashboard"><i class='bx bx-chalkboard'></i> Dashboard</li>
+        <li class="active" id="my-profile"><i class='bx bx-user'></i> Profile</li>
+        <li id="all-students"><i class='bx bxs-group'></i> All Students</li>
+        <li><i class='bx bx-book-alt'></i> Courses</li>
+        <li><i class='bx bx-check-square'></i> Attendance</li>
+        <li><i class='bx bx-edit'></i> Exam</li>
+      </ul>
+      <div class="div-logout" id="logout-btn">
+        <i class='bxr  bx-arrow-in-left-square-half'></i>
+        <span>Logout</span>
+      </div>
+    </aside>
 
     <main class="main-content">
       <header class="header">

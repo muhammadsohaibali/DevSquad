@@ -71,6 +71,10 @@ i {
     object-fit: contain;
 }
 
+.div-logo>span {
+    display: none;
+}
+
 .div-tabs {
     display: flex;
     flex-direction: column;
@@ -120,7 +124,7 @@ i {
     margin: auto 0;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1200px) {
     .div-sidebar-left {
         padding: 10px;
         width: 7%;
