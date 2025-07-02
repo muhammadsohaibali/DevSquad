@@ -1,4 +1,3 @@
-// Variables
 const MIN_USER_PASS_LENGTH = 4;
 const LOCALSTORAGE_AUTH_VAR = 'isAuthenticated';
 
@@ -7,11 +6,11 @@ const NON_AUTH_PAGES = ['dashboard', 'all-students', 'student-profile']
 
 const CURRENT_PAGE = location.pathname.split('/').filter(Boolean).pop();
 
-const BASE_PATH = localStorage.getItem('local')
+const isLocal = ['127.0.0.1', '192.168.100.4', 'localhost'].includes(location.hostname);
+const BASE_PATH = isLocal
     ? '/Projects/26-June-2025/Compiled/pages/'
     : '/DevSquad/Projects/26-June-2025/Compiled/pages/'
 
-// Main Code
 document.addEventListener('DOMContentLoaded', () => {
     init();
 })
@@ -91,26 +90,22 @@ function redirect(page) {
     location.assign(BASE_PATH + (page ? `${page}/` : 'dashboard/'));
 }
 
-// Authentication
 function validateAuth(page) {
     const isAuthenticated = localStorage.getItem(LOCALSTORAGE_AUTH_VAR);
 
+    if (isAuthenticated && AUTH_PAGES.includes(CURRENT_PAGE)) return location.assign(BASE_PATH + 'dashboard/');
+
     if (!isAuthenticated) {
-        if (!AUTH_PAGES.includes(CURRENT_PAGE)) {
-            location.assign(BASE_PATH + 'login/');
-        }
+        if (!AUTH_PAGES.includes(CURRENT_PAGE)) location.assign(BASE_PATH + 'login/');
         return;
     }
 
     if (page) {
         if (page === CURRENT_PAGE) return;
-        location.assign(BASE_PATH + page);
-        return;
+        return location.assign(BASE_PATH + page);
     }
 
-    if (!AUTH_PAGES.includes(CURRENT_PAGE) && CURRENT_PAGE !== 'dashboard') {
-        location.assign(BASE_PATH + 'dashboard/');
-    }
+    if (!AUTH_PAGES.includes(CURRENT_PAGE) && CURRENT_PAGE !== 'dashboard') location.assign(BASE_PATH + 'dashboard/');
 }
 
 function authenticated(username, password) {

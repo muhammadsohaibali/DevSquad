@@ -2,22 +2,25 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../assets/imgs/favicon.ico" type="image/x-icon">
-    <title>Baitussalam TechPark</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../../assets/imgs/favicon.ico" type="image/x-icon" />
 
+    <title>Baitussalam TechPark</title>
+</head>
+
+<body>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            localStorage.setItem('local', true)
-            
-            const BASE_PATH = localStorage.getItem('local')
-                ? '/Projects/26-June-2025/Compiled/pages/'
-                : '/DevSquad/Projects/26-June-2025/Compiled/pages/'
+            const isLocal = ['127.0.0.1', '192.168.100.4', 'localhost'].includes(location.hostname);
 
-            location.assign(`${BASE_PATH}dashboard/`)
-        })
+            const BASE_PATH = isLocal
+                ? '/Projects/26-June-2025/Compiled/pages/'
+                : '/DevSquad/Projects/26-June-2025/Compiled/pages/';
+
+            location.assign(`${BASE_PATH}dashboard/`);
+        });
     </script>
-</head>
+</body>
 
 </html>
