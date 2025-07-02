@@ -4,59 +4,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
   <link rel="shortcut icon" href="../../assets/imgs/favicon.ico" type="image/x-icon">
+
   <link rel="stylesheet" href="../../assets/css/profile.css">
-  <link rel="stylesheet" href="../../assets/css/all-students.css">
+
+  <link rel="stylesheet" href="../../assets/css/components/sidebar.css">
+  <link rel="stylesheet" href="../../assets/css/components/topbar.css" />
+
   <title>My Profile - Baitussalam TechPark</title>
 </head>
 
 <body>
-  <div class="container">
-    <!-- <nav class="sidebar">
-      <div class="logo">
-        <img src="../../assets/imgs/btp-logo.png" class="logo" alt="not">
+  <div class="main-container-div">
+    <aside class="sidebar-sidebar">
+      <div class="sidebar-logo">
+        <img class="img-default" src="../../assets/imgs/btp-logo.png" alt="Tech Park Logo">
+        <img class="img-min" src="../../assets/imgs/baitussalam-logo-min.svg" alt="Tech Park Logo">
+        <div class="sidebar-div-logout" id="">
+          <i class='bxr bx-arrow-in-left-square-half'></i>
+          <span>Logout</span>
+        </div>
       </div>
-
-      <ul class="nav-menu">
-        <li><a href="#" class="nav-link active">Home</a></li>
-        <li><a href="#" class="nav-link" id="goto-dashboard">Dashboard</a></li>
-        <li><a href="#" class="nav-link">Teachers</a></li>
-        <li><a href="#" class="nav-link">Classes</a></li>
-        <li><a href="#" class="nav-link">Complaints</a></li>
+      <ul class="sidebar-menu">
+        <li id="goto-dashboard">
+          <i class='bx bx-chalkboard'></i>
+          <span>Dashboard</span>
+        </li>
+        <li id="my-profile" class="sidebar-active">
+          <i class='bx bx-user'></i>
+          <span>Profile</span>
+        </li>
+        <li id="all-students">
+          <i class='bx bxs-group'></i>
+          <span>All Students</span>
+        </li>
+        <li>
+          <i class='bx bx-book-alt'></i>
+          <span>Courses</span>
+        </li>
+        <li>
+          <i class='bx bx-check-square'></i>
+          <span>Attendance</span>
+        </li>
+        <li>
+          <i class='bx bx-edit'></i>
+          <span>Exam</span>
+        </li>
       </ul>
-    </nav> -->
-
-    <aside class="sidebar">
-      <div class="logo">
-        <img src="../../assets/imgs/btp-logo.png" alt="Tech Park Logo">
-      </div>
-      <ul class="menu">
-        <li id="goto-dashboard"><i class='bx bx-chalkboard'></i> Dashboard</li>
-        <li class="active" id="my-profile"><i class='bx bx-user'></i> Profile</li>
-        <li id="all-students"><i class='bx bxs-group'></i> All Students</li>
-        <li><i class='bx bx-book-alt'></i> Courses</li>
-        <li><i class='bx bx-check-square'></i> Attendance</li>
-        <li><i class='bx bx-edit'></i> Exam</li>
-      </ul>
-      <div class="div-logout" id="logout-btn">
-        <i class='bxr  bx-arrow-in-left-square-half'></i>
+      <div class="sidebar-div-logout" id="logout-btn">
+        <i class='bxr bx-arrow-in-left-square-half'></i>
         <span>Logout</span>
       </div>
     </aside>
 
-    <main class="main-content">
-      <header class="header">
-        <h1>Student Details</h1>
-        <div class="user-info">
-          <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="User" class="user-avatar" /> <!--  -->
-          <span>John Doe</span>
+    <main class="main-main">
+      <header class="main-header">
+        <div class="main-search">
+          <i class='bx bx-search'></i>
+          <input type="text" placeholder="Search" id="querry-inp">
+        </div>
+        <div class="user-info-container">
+          <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="User" class="user-avatar" />
+          <div class="user-info">
+            <span class="user-username">John Doe</span>
+            <span class="user-role">Admin</span>
+          </div>
         </div>
       </header>
 
-      <div class="profile-card">
+      <section class="profile-card">
         <div class="profile-header">
           <h2>Profile</h2>
           <div class="actions">
@@ -102,7 +122,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   </div>
 

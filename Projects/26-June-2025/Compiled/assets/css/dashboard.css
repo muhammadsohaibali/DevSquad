@@ -20,6 +20,10 @@ i {
     height: 100vh;
 }
 
+.div-sidebar-left {
+    display: none !important;
+}
+
 .div-sidebar-left,
 .div-sidebar-right {
     width: 20%;

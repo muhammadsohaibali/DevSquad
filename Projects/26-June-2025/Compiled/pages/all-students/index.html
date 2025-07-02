@@ -4,51 +4,85 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../../assets/imgs/favicon.ico" type="image/x-icon">
+    
     <link rel="stylesheet" href="../../assets/css/all-students.css" />
+
+    <link rel="stylesheet" href="../../assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../../assets/css/components/topbar.css" />
 
     <title>All Students - BaitusSalam TeckPark</title>
 </head>
 
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <div class="logo">
-                <img src="../../assets/imgs/btp-logo.png" alt="Tech Park Logo">
+    <div class="main-container-div">
+        <aside class="sidebar-sidebar">
+            <div class="sidebar-logo">
+                <img class="img-default" src="../../assets/imgs/btp-logo.png" alt="Tech Park Logo">
+                <img class="img-min" src="../../assets/imgs/baitussalam-logo-min.svg" alt="Tech Park Logo">
+                <div class="sidebar-div-logout" id="">
+                    <i class='bxr bx-arrow-in-left-square-half'></i>
+                    <span>Logout</span>
+                </div>
             </div>
-            <ul class="menu">
-                <li id="goto-dashboard"><i class='bx bx-chalkboard'></i> Dashboard</li>
-                <li id="my-profile"><i class='bx bx-user'></i> Profile</li>
-                <li class="active" id="all-students"><i class='bx bxs-group'></i> All Students</li>
-                <li><i class='bx bx-book-alt'></i> Courses</li>
-                <li><i class='bx bx-check-square'></i> Attendance</li>
-                <li><i class='bx bx-edit'></i> Exam</li>
+            <ul class="sidebar-menu">
+                <li id="goto-dashboard">
+                    <i class='bx bx-chalkboard'></i>
+                    <span>Dashboard</span>
+                </li>
+                <li id="my-profile">
+                    <i class='bx bx-user'></i>
+                    <span>Profile</span>
+                </li>
+                <li id="all-students" class="sidebar-active">
+                    <i class='bx bxs-group'></i>
+                    <span>All Students</span>
+                </li>
+                <li>
+                    <i class='bx bx-book-alt'></i>
+                    <span>Courses</span>
+                </li>
+                <li>
+                    <i class='bx bx-check-square'></i>
+                    <span>Attendance</span>
+                </li>
+                <li>
+                    <i class='bx bx-edit'></i>
+                    <span>Exam</span>
+                </li>
             </ul>
-            <div class="div-logout" id="logout-btn">
-                <i class='bxr  bx-arrow-in-left-square-half'></i>
+            <div class="sidebar-div-logout" id="logout-btn">
+                <i class='bxr bx-arrow-in-left-square-half'></i>
                 <span>Logout</span>
             </div>
         </aside>
 
-        <main class="main">
-            <header class="topbar">
-                <input type="text" placeholder="Search students..." class="search" />
-                <div class="user-info">
+        <main class="main-main">
+            <header class="main-header">
+                <div class="main-search">
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Search" id="querry-inp">
+                </div>
+                <div class="user-info-container">
                     <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="User" class="user-avatar" />
-                    <span>John Doe</span>
+                    <div class="user-info">
+                        <span class="user-username">John Doe</span>
+                        <span class="user-role">Admin</span>
+                    </div>
                 </div>
             </header>
 
-            <section class="content">
-                <div class="header">
-                    <h2>Students List</h2>
+            <section class="main-content">
+                <!-- <div class="header">
+                    <h2>All Students</h2>
                     <button class="add-btn">
                         <i class='bx bx-plus'></i> Add Student
                     </button>
-                </div>
+                </div> -->
 
                 <table class="student-table">
                     <thead>

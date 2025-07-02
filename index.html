@@ -9,7 +9,13 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            location.assign('/DevSquad/Projects/26-June-2025/Compiled/pages/dashboard/')
+            localStorage.setItem('local', true)
+            
+            const BASE_PATH = localStorage.getItem('local')
+                ? '/Projects/26-June-2025/Compiled/pages/'
+                : '/DevSquad/Projects/26-June-2025/Compiled/pages/'
+
+            location.assign(`${BASE_PATH}dashboard/`)
         })
     </script>
 </head>

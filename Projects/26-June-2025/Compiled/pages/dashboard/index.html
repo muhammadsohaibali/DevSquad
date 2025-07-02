@@ -2,200 +2,196 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="../../assets/imgs/favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="../../assets/css/dashboard.css">
     <link rel="stylesheet" href="../../assets/css/dashboard-responsive.css">
     <link rel="stylesheet" href="../../assets/css/dashboard-themed.css">
-    <link rel="stylesheet" href="../../assets/css/all-students.css">
+
+    <link rel="stylesheet" href="../../assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../../assets/css/components/topbar.css" />
 
     <title>Student Dashboard - Baitussalam TechPark</title>
 </head>
 
 <body>
-    <div class="div-container">
-        <!-- <div class="div-sidebar-left">
-            <div class="div-logo">
-                <img src="../../assets/imgs/btp-logo.png" class="logo" alt="not">
-                <span>BT</span>
+    <div class="main-container-div">
+        <aside class="sidebar-sidebar">
+            <div class="sidebar-logo">
+                <img class="img-default" src="../../assets/imgs/btp-logo.png" alt="Tech Park Logo">
+                <img class="img-min" src="../../assets/imgs/baitussalam-logo-min.svg" alt="Tech Park Logo">
+                <div class="sidebar-div-logout" id="">
+                    <i class='bxr bx-arrow-in-left-square-half'></i>
+                    <span>Logout</span>
+                </div>
             </div>
-            <div class="div-tabs">
-                <div class="div-tab active">
-                    <i class='bx bxs-dashboard'></i>
+            <ul class="sidebar-menu">
+                <li id="goto-dashboard" class="sidebar-active">
+                    <i class='bx bx-chalkboard'></i>
                     <span>Dashboard</span>
-                </div>
-                <div class="div-tab" id="my-profile">
-                    <i class='bx bxs-user'></i>
+                </li>
+                <li id="my-profile">
+                    <i class='bx bx-user'></i>
                     <span>Profile</span>
-                </div>
-                <div class="div-tab">
-                    <i class='bx bxs-book'></i>
-                    <span>Courses</span>
-                </div>
-                <div class="div-tab" id="all-students">
+                </li>
+                <li id="all-students">
                     <i class='bx bxs-group'></i>
                     <span>All Students</span>
-                </div>
-                <div class="div-tab">
-                    <i class='bx bxs-folder'></i>
-                    <span>Resources</span>
-                </div>
-                <div class="div-tab">
-                    <i class='bx bxs-code-alt'></i>
-                    <span>Projects</span>
-                </div>
-                <div class="div-tab">
-                    <i class='bx bxs-arrow-to-top-stroke'></i>
-                    <span>Submissions</span>
-                </div>
-            </div>
-            <div class="div-logout" id="logout-btn">
-                <i class='bx bxs-arrow-out-left-square-half'></i>
-                <span>Logout</span>
-            </div>
-        </div> -->
-
-        <aside class="sidebar">
-            <div class="logo">
-                <img src="../../assets/imgs/btp-logo.png" alt="Tech Park Logo">
-            </div>
-            <ul class="menu">
-                <li class="active" id="goto-dashboard"><i class='bx bx-chalkboard'></i> Dashboard</li>
-                <li id="my-profile"><i class='bx bx-user'></i> Profile</li>
-                <li id="all-students"><i class='bx bxs-group'></i> All Students</li>
-                <li><i class='bx bx-book-alt'></i> Courses</li>
-                <li><i class='bx bx-check-square'></i> Attendance</li>
-                <li><i class='bx bx-edit'></i> Exam</li>
+                </li>
+                <li>
+                    <i class='bx bx-book-alt'></i>
+                    <span>Courses</span>
+                </li>
+                <li>
+                    <i class='bx bx-check-square'></i>
+                    <span>Attendance</span>
+                </li>
+                <li>
+                    <i class='bx bx-edit'></i>
+                    <span>Exam</span>
+                </li>
             </ul>
-            <div class="div-logout" id="logout-btn">
-                <i class='bxr  bx-arrow-in-left-square-half'></i>
+            <div class="sidebar-div-logout" id="logout-btn">
+                <i class='bxr bx-arrow-in-left-square-half'></i>
                 <span>Logout</span>
             </div>
         </aside>
 
-        <div class="main-div-container">
-            <div class="div-search">
-                <i class='bx bx-search'></i>
-                <input type="text" name="querry" placeholder="Search" id="querry-inp">
-            </div>
-            <div class="div-main">
-                <div class="div-new-course">
-                    <div class="div-welcome">
-                        HELLO LEARNERS
-                    </div>
-                    <div class="div-course-title">
-                        New Bootcamp: Shopify Mastery
-                    </div>
-                    <div class="div-course-description">
-                        Learn how to build stores, manage products, and design themes.
-                    </div>
-                    <div class="div-course-action-btn">
-                        Join Now
+        <main class="main-main">
+            <header class="main-header">
+                <div class="main-search">
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Search" id="querry-inp">
+                </div>
+                <div class="user-info-container">
+                    <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="User" class="user-avatar" />
+                    <div class="user-info">
+                        <span class="user-username">John Doe</span>
+                        <span class="user-role">Admin</span>
                     </div>
                 </div>
-                <div class="div-your-courses">
-                    <div class="section-header">
-                        <span>Your Courses</span>
-                        <div class="section-action-btns">
-                            <i class='bxr bx-caret-left'></i>
-                            <i class='bxr bx-caret-right'></i>
-                        </div>
-                    </div>
-                    <div class="your-courses-section">
-                        <div class="your-course yellow-div">
-                            <div class="your-course-header">
-                                <div class="course-title">Web Development</div>
-                                <div class="course-days-remaining yellow-div-child">46 Classes Left</div>
-                            </div>
-                            <div class="your-course-total-classes">70 Classes</div>
-                            <div class="your-course-duration-progress-bar">
-                                <div>
-                                    <div style="width: 34%;"></div>
-                                </div>
-                                <span>34%</span>
-                            </div>
-                            <div class="your-course-footer">
-                                <div class="course-footer-left">
-                                    <div class="course-attendance-count"> 19/24 </div>
-                                    <div class="course-attendance-text"> Attendance </div>
-                                </div>
-                                <div class="course-footer-right">
-                                    <div class="course-continue-btn"> Continue </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="your-course green-div">
-                            <div class="your-course-header">
-                                <div class="course-title">Shopify Basics</div>
-                                <div class="course-days-remaining green-div-child">10 Classes Left</div>
-                            </div>
-                            <div class="your-course-total-classes">40 Classes</div>
-                            <div class="your-course-duration-progress-bar">
-                                <div>
-                                    <div style="width: 75%;"></div>
-                                </div>
-                                <span>75%</span>
-                            </div>
-                            <div class="your-course-footer">
-                                <div class="course-footer-left">
-                                    <div class="course-attendance-count"> 25/30 </div>
-                                    <div class="course-attendance-text"> Attendance </div>
-                                </div>
-                                <div class="course-footer-right">
-                                    <div class="course-continue-btn"> Continue </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="div-your-resources">
-                    <div class="section-header">
-                        <span>Your Resources</span>
-                        <div class="section-action-btns">
-                            <i class='bxr bx-caret-left'></i>
-                            <i class='bxr bx-caret-right'></i>
-                        </div>
-                    </div>
-                    <div class="div-your-resources-section">
-                        <div class="div-your-resource">
-                            <div class="your-resource-title">Clean Code</div>
-                            <div class="your-resource-author">Robert Martin</div>
-                            <div class="your-resource-footer">
-                                <div class="your-resource-type">PDF</div>
-                                <div class="your-resource-read-watch-btn">Read</div>
-                            </div>
-                        </div>
+            </header>
 
-                        <div class="div-your-resource">
-                            <div class="your-resource-title">Intro to Shopify Store Setup</div>
-                            <div class="your-resource-author">Recorded Session - BWT</div>
-                            <div class="your-resource-footer">
-                                <div class="your-resource-type">Video</div>
-                                <div class="your-resource-read-watch-btn">Watch</div>
+            <section class="">
+                <div class="left-col">
+                    <div class="div-new-course">
+                        <div class="div-welcome">
+                            HELLO LEARNERS
+                        </div>
+                        <div class="div-course-title">
+                            New Bootcamp: Shopify Mastery
+                        </div>
+                        <div class="div-course-description">
+                            Learn how to build stores, manage products, and design themes.
+                        </div>
+                        <div class="div-course-action-btn">
+                            Join Now
+                        </div>
+                    </div>
+                    <div class="div-your-courses">
+                        <div class="section-header">
+                            <span>Your Courses</span>
+                            <div class="section-action-btns">
+                                <i class='bxr bx-caret-left'></i>
+                                <i class='bxr bx-caret-right'></i>
                             </div>
                         </div>
+                        <div class="your-courses-section">
+                            <div class="your-course yellow-div">
+                                <div class="your-course-header">
+                                    <div class="course-title">Web Development</div>
+                                    <div class="course-days-remaining yellow-div-child">46 Classes Left</div>
+                                </div>
+                                <div class="your-course-total-classes">70 Classes</div>
+                                <div class="your-course-duration-progress-bar">
+                                    <div>
+                                        <div style="width: 34%;"></div>
+                                    </div>
+                                    <span>34%</span>
+                                </div>
+                                <div class="your-course-footer">
+                                    <div class="course-footer-left">
+                                        <div class="course-attendance-count"> 19/24 </div>
+                                        <div class="course-attendance-text"> Attendance </div>
+                                    </div>
+                                    <div class="course-footer-right">
+                                        <div class="course-continue-btn"> Continue </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="your-course green-div">
+                                <div class="your-course-header">
+                                    <div class="course-title">Shopify Basics</div>
+                                    <div class="course-days-remaining green-div-child">10 Classes Left</div>
+                                </div>
+                                <div class="your-course-total-classes">40 Classes</div>
+                                <div class="your-course-duration-progress-bar">
+                                    <div>
+                                        <div style="width: 75%;"></div>
+                                    </div>
+                                    <span>75%</span>
+                                </div>
+                                <div class="your-course-footer">
+                                    <div class="course-footer-left">
+                                        <div class="course-attendance-count"> 25/30 </div>
+                                        <div class="course-attendance-text"> Attendance </div>
+                                    </div>
+                                    <div class="course-footer-right">
+                                        <div class="course-continue-btn"> Continue </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div-your-resources">
+                        <div class="section-header">
+                            <span>Your Resources</span>
+                            <div class="section-action-btns">
+                                <i class='bxr bx-caret-left'></i>
+                                <i class='bxr bx-caret-right'></i>
+                            </div>
+                        </div>
+                        <div class="div-your-resources-section">
+                            <div class="div-your-resource">
+                                <div class="your-resource-title">Clean Code</div>
+                                <div class="your-resource-author">Robert Martin</div>
+                                <div class="your-resource-footer">
+                                    <div class="your-resource-type">PDF</div>
+                                    <div class="your-resource-read-watch-btn">Read</div>
+                                </div>
+                            </div>
 
-                        <div class="div-your-resource">
-                            <div class="your-resource-title">JavaScript DOM Reference</div>
-                            <div class="your-resource-author">MDN Docs</div>
-                            <div class="your-resource-footer">
-                                <div class="your-resource-type">Docs</div>
-                                <div class="your-resource-read-watch-btn">View</div>
+                            <div class="div-your-resource">
+                                <div class="your-resource-title">Intro to Shopify Store Setup</div>
+                                <div class="your-resource-author">Recorded Session - BWT</div>
+                                <div class="your-resource-footer">
+                                    <div class="your-resource-type">Video</div>
+                                    <div class="your-resource-read-watch-btn">Watch</div>
+                                </div>
+                            </div>
+
+                            <div class="div-your-resource">
+                                <div class="your-resource-title">JavaScript DOM Reference</div>
+                                <div class="your-resource-author">MDN Docs</div>
+                                <div class="your-resource-footer">
+                                    <div class="your-resource-type">Docs</div>
+                                    <div class="your-resource-read-watch-btn">View</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="div-sidebar-right">
-            <div class="div-attendance"></div>
-            <div class="div-average-score"></div>
-        </div>
+                <div class="right-col">
+
+                </div>
+            </section>
+        </main>
     </div>
 
     <script src="../../assets/js/script.js"></script>
