@@ -76,7 +76,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-}
+} 
 
 .main-main section {
     margin: 10px;
@@ -88,6 +88,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    margin-left: 10px;
 }
 
 .main-main section .header h2 {
