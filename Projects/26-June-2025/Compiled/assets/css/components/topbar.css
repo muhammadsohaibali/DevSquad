@@ -67,7 +67,7 @@
 }
 
 .user-info .user-role {
-    font-size: 12px;
+    font-size: 12px; 
     margin-top: -5px;
     color: var(--light-text);
 }
