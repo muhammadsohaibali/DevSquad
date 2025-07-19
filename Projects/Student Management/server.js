@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 
 app.get('/dashboard', (req, res) => {
   const isAuth = checkAuth(req, res)
-  if (isAuth) return res.sendFile(path.join(__dirname, 'pages', '/dashboard'));
+  if (isAuth) return res.sendFile(path.join(__dirname, 'pages', 'dashboard.html'));
   res.redirect('/login');
 })
 
